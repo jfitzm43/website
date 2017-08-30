@@ -26,4 +26,7 @@ Red Sox | American
 
 
 
-<!-- regular html comment --> 
+<!-- Save the document, open git bash, select folder, make it a git repository
+      save the version there, go to github, create a repository for it, push it from gitbash to github
+      and then refresh, go to settings, scroll down to github pages in source go from none to master branch
+      and then save it, refresh the site and the link should be green and the website live--> 
