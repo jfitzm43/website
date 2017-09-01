@@ -1,9 +1,14 @@
 ---
-title: "dplyr"
+title: "Jorge Fitzmaurice Torres"
 output: html_document
 ---
+#Master's Degree in Data Science
 
-## Filtering Columns and Rows
+<img src="2C7A0180.jpg" width="300">
+
+##I am an international student from Mexico.
+
+### Filtering Columns and Rows
 
 When using dplyr, you can filter columns and rows by using select and filter. Let's look at an example using the Lahman baseball database. We first have to load the Lahman and dyplr packages.
 
