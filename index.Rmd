@@ -2,11 +2,11 @@
 title: "Jorge Fitzmaurice Torres"
 output: html_document
 ---
-#Master's Degree in Data Science
 
 <img src="2C7A0180.jpg" width="300">
 
-##I am an international student from Mexico.
+Master's Degree in Data Science
+I am an international student from Mexico.
 
 ### Filtering Columns and Rows
 
