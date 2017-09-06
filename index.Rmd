@@ -26,3 +26,63 @@ Batting%>%
   filter(teamID=='NYA' & yearID=='1927')
 ```
 
+### Examples:
+
+Using the Lahman database i want to find all the instances wheere Yankees players have hit 40 homeruns or more (playerID,teamID,yearID,HR):
+
+```{r}
+Batting%>%
+  select(playerID,yearID,teamID,HR)%>%
+  filter(HR >= 40 & teamID == 'NYA')
+```
+
+This is just a different way to put the dplyr code for filter and select:
+
+```{r}
+Batting%>%
+  filter(HR >=40 & teamID == 'NYA')%>%
+  select(playerID,yearID,teamID,HR)
+```
+
+Find all instances where a player had more than 40 HR but less than 60 strikeouts(playerID,yearID,teamID,HR,SO):
+
+```{r}
+Batting%>%
+  filter(HR > 40 & SO<60)%>%
+  select(playerID,yearID,teamID,HR,SO)
+```
+
+Find all instances of Phillies in the 1970's hitting more than 30 HR (playerID,yearID,teamID,HR):
+
+```{r}
+Batting%>%
+  select(playerID,yearID,teamID,HR)%>%
+  filter(teamID =='PHI' & yearID>=1970 & yearID<1980 & HR>30)
+```
+
+Find every instance of a player hitting more than 50 homeruns but let's have the players with the most homeruns at the top (playerID,yearID,teamID,HR):
+
+```{r}
+Batting%>%
+  select(playerID,yearID,teamID,HR)%>%
+  filter(HR>50)%>%
+  arrange(desc(HR))
+```
+
+Find all instances of a player striking out less than 10 times, players have to have at lease 400 AB. Players with the smallest number of strikeouts at the top (playerID,yearID,teamID,SO,AB):
+
+```{r}
+Batting%>%
+  select(playerID,teamID,yearID,SO,AB)%>%
+  filter(SO<10 & AB>=400)%>%
+  arrange(SO)
+```
+
+Another way to do the same excersice where we filter first and then select. This is just to avoid putting the AB column in the results.
+
+```{r}
+Batting%>%
+  filter(SO<10 & AB>=400)%>%
+  select(playerID,teamID,yearID,SO)%>%
+  arrange(SO)
+```
