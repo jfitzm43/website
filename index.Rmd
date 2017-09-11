@@ -87,7 +87,7 @@ Batting%>%
   arrange(SO)
 ```
 
-### Examples of agreggation functions in R using the Lahman database and dplyr:
+### Agreggation functions in R using the Lahman database and dplyr:
 
 1. Find the total career HR's for Babe Ruth.
 
